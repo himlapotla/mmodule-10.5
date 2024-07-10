@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% comment %}  Join Filter {% endcomment %}
+    <h1> {{listt | join:"--"}} </h1> 
+
+
+    {% comment %} Date Filter {% endcomment %}
+    <h1> {{ time | date:"SHORT_DATE_FORMAT" }} </h1> 
+
+
+
+    {% comment %} Default Filter {% endcomment %}
+    <h1> {{ nothing | default:"Nothing is here"}} </h1> 
+
+
+
+    {% comment %} Add Filter {% endcomment %}
+    <h1> {{number | add:"100"}} </h1>
+
+
+
+    {% comment %} Capfirst Filter {% endcomment %}
+    <h1> {{ word | capfirst}} </h1>
+
+
+
+    {% comment %} Cut Filter {% endcomment %}   
+    <h1> {{cut | cut:","}} </h1>
+
+
+
+
+    {% comment %} Dictsort Filter {% endcomment %}
+    <h1> {{llst | dictsort:"age"}} </h1>
+
+ 
+
+    {% comment %} Escape Filter {% endcomment %}
+    <h1> {{ '<p>This <em>should be</em> fun!</p>' | escape }} </h1>
+
+
+
+
+    {% comment %} First Filter {% endcomment %}
+    <h1> {{list | first}} </h1>
+
+
+    
+
+    {% comment %} Last Filter {% endcomment %}
+    <h1> {{lst | last}} </h1>
+
+
+
+
+    {% comment %} Length Filter {% endcomment %}
+    <h1> {{lst | length}} </h1>
+
+
+
+
+    {% comment %} Linenumbers Filter {% endcomment %}
+    <h1> {{lstt | linenumbers}} </h1>
+
+
+
+    {% comment %} Lower Filter {% endcomment %}
+    <h1> {{ listt | lower }} </h1>
+
+
+
+    {% comment %} Upper Filter {% endcomment %}
+    <h1> {{ listt | upper }} </h1>
+
+
+
+    {% comment %} Title Filter {% endcomment %}
+    <h1> {{line | title}} </h1>
+
+
+
+    {% comment %} Random Filter {% endcomment %}
+    <h1> {{random | random}} </h1>
+
+
+
+    {% comment %} Slice Filter {% endcomment %}
+    <h1> {{random | slice:":2"}} </h1>
+
+
+
+    {% comment %} Time Filter {% endcomment %}
+    <h1>  </h1>
+
+
+
+    {% comment %} Timesince Filter {% endcomment %}
+    <h1>  </h1>
+
+
+
+    {% comment %} Truncatechars Filter {% endcomment %}
+    <h1> {{line | truncatechars:10}} </h1>
+
+
+
+    {% comment %} Wordcount Filter {% endcomment %}
+    <h1>  {{line |  wordcount}} </h1>
+
+    
+
+    {% comment %} Truncatewords Filter {% endcomment %}
+    <h1> {{line |  truncatewords:7}} </h1>
+
+
+
+    {% comment %} Striptags Filter {% endcomment %}
+    <h1>{{ '<b>I</b> <button>love</button> <span>dogs</span>' | striptags }}</h1>
+
+
+
+    {% comment %} Make_list Filter {% endcomment %}
+    <h1> {{line |  make_list}} </h1>
+
+
+</body>
+</html>
